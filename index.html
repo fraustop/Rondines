@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Rondines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página Inicial: Selección de Caseta -->
+    <div id="pagina-inicial" class="pagina">
+        <h1>Reporte de Rondines</h1>
+        <label>
+            <input type="checkbox" id="responsable-turno">
+            Soy responsable de turno (opcional)
+        </label>
+        <br>
+        <label for="caseta">Selecciona tu caseta:</label>
+        <select id="caseta">
+            <option value="">Seleccione...</option>
+            <option value="Edison">Edison</option>
+            <option value="Impulso">Impulso</option>
+            <option value="Michelena">Michelena</option>
+            <option value="Simón Bolívar">Simón Bolívar</option>
+        </select>
+        <br>
+        <button id="confirmar-seleccion">Confirmar</button>
+        <p id="mensaje-seleccion"></p>
+    </div>
+
+    <!-- Página Opciones: Actualización de Ubicación y Reportes -->
+    <div id="pagina-opciones" class="pagina" style="display: none;">
+        <h1>Opciones Disponibles</h1>
+        <p id="caseta-confirmada"></p>
+        <button id="actualizar-ubicacion">Actualizar ubicación</button>
+        <button id="realizar-reporte">Realizar reporte</button>
+    </div>
+
+    <!-- Modal para Microsoft Forms -->
+    <div id="modal-reporte" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="cerrar-modal" class="close">&times;</span>
+            <h2>Formulario de Reporte</h2>
+         <iframe 
+    id="formulario-iframe"
+    src="https://forms.office.com/Pages/ResponsePage.aspx?id=MHpazZpfC0GgN4bh4XpDMMqoHR8Ihy5EqXBkfYzBhbRUOVdCT0pKMlBXQk02VVdONUpQM0JQWDlDVi4u&embed=true" 
+    frameborder="0" 
+    marginwidth="0" 
+    marginheight="0" 
+    style="border: none; width: 100%; height: 500px;" 
+    allowfullscreen 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    msallowfullscreen>
+</iframe>
+
+            <br>
+            <button id="regresar-aplicacion">Regresar a la aplicación</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
