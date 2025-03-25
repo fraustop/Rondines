@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte de Rondines</title>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoGMql48pFyB9VFETw0c_dxFaC5yXRyVQ"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,6 +36,8 @@
         <p id="caseta-confirmada"></p>
         <button id="actualizar-ubicacion">Actualizar ubicación</button>
         <button id="realizar-reporte">Realizar reporte</button>
+        <!-- Contenedor del mapa -->
+        <div id="mapa" style="width: 100%; height: 500px; margin-top: 20px;"></div>
     </div>
 
     <!-- Modal para Microsoft Forms -->
@@ -41,19 +45,18 @@
         <div class="modal-content">
             <span id="cerrar-modal" class="close">&times;</span>
             <h2>Formulario de Reporte</h2>
-         <iframe 
-    id="formulario-iframe"
-    src="https://forms.office.com/Pages/ResponsePage.aspx?id=MHpazZpfC0GgN4bh4XpDMMqoHR8Ihy5EqXBkfYzBhbRUOVdCT0pKMlBXQk02VVdONUpQM0JQWDlDVi4u&embed=true" 
-    frameborder="0" 
-    marginwidth="0" 
-    marginheight="0" 
-    style="border: none; width: 100%; height: 500px;" 
-    allowfullscreen 
-    webkitallowfullscreen 
-    mozallowfullscreen 
-    msallowfullscreen>
-</iframe>
-
+            <iframe 
+                id="formulario-iframe"
+                src="https://forms.office.com/Pages/ResponsePage.aspx?id=MHpazZpfC0GgN4bh4XpDMMqoHR8Ihy5EqXBkfYzBhbRUOVdCT0pKMlBXQk02VVdONUpQM0JQWDlDVi4u&embed=true" 
+                frameborder="0" 
+                marginwidth="0" 
+                marginheight="0" 
+                style="border: none; width: 100%; height: 500px;" 
+                allowfullscreen 
+                webkitallowfullscreen 
+                mozallowfullscreen 
+                msallowfullscreen>
+            </iframe>
             <br>
             <button id="regresar-aplicacion">Regresar a la aplicación</button>
         </div>
